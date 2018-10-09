@@ -27,9 +27,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyHoleder> {
     @Override
     public MyHoleder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View layout = LayoutInflater.from(parent.getContext()).inflate(R.layout.grid_layout,null);
-        MyHoleder myHoleder = new MyHoleder(layout);
-        return null;
+        View itemView = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.grid_layout,parent,false);
+        return new MyHoleder(itemView);
     }
 
     @Override
